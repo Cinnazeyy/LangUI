@@ -1,0 +1,4 @@
+name: LangUI
+version: '1.0-SNAPSHOT'
+main: li.cinnazeyy.langUI.LangUI
+api-version: '1.21'
