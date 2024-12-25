@@ -44,7 +44,7 @@ public final class LangUI extends JavaPlugin {
         // Load language files
         try {
             LangUtil.init();
-            getLogger().severe("Successfully loaded language files.");
+            getLogger().info("Successfully loaded language files.");
         } catch (Exception ex) {
             getPlugin().getComponentLogger().error(text(ex.getMessage()), ex);
             getServer().getPluginManager().disablePlugin(this);
