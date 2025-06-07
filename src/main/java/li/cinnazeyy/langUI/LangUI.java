@@ -2,7 +2,6 @@ package li.cinnazeyy.langUI;
 
 import li.cinnazeyy.langUI.commands.CMD_Language;
 import li.cinnazeyy.langUI.util.LangUtil;
-import li.cinnazeyy.langlibs.core.file.YamlFileFactory;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandMap;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -28,8 +27,6 @@ public final class LangUI extends JavaPlugin {
     public void onEnable() {
         // Plugin startup login
         plugin = this;
-
-        YamlFileFactory.registerPlugin(this);
 
         // Register Events
         getServer().getPluginManager().registerEvents(new MenuFunctionListener(), plugin);

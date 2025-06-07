@@ -3,10 +3,9 @@ package li.cinnazeyy.langUI;
 import com.alpsbte.alpslib.utils.head.AlpsHeadUtils;
 import com.alpsbte.alpslib.utils.item.ItemBuilder;
 import li.cinnazeyy.langUI.util.LangUtil;
-import li.cinnazeyy.langlibs.LangLibs;
-import li.cinnazeyy.langlibs.core.Language;
+import li.cinnazeyy.langlibs.core.LangLibAPI;
+import li.cinnazeyy.langlibs.core.language.Language;
 import li.cinnazeyy.langlibs.core.event.LanguageChangeEvent;
-import li.cinnazeyy.langlibs.core.language.LangLibAPI;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Bukkit;
@@ -62,7 +61,7 @@ public class LanguageSelectMenu implements Listener {
     }
 
     private ItemStack getLanguageItem(Language lang) {
-        boolean useHeads = LangLibs.getPlugin().getConfig().getBoolean("languageSelection.useHeads");
+        boolean useHeads = LangUI.getPlugin().getConfig().getBoolean("languageSelection.useHeads");
 
         Component itemName = text(lang.getName(), GOLD)
                 .decoration(TextDecoration.BOLD, true)
