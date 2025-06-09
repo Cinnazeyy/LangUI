@@ -43,16 +43,14 @@ public final class LangUI extends JavaPlugin {
             LangUtil.init();
             getLogger().info("Successfully loaded language files.");
         } catch (Exception ex) {
-            getPlugin().getComponentLogger().error(text(ex.getMessage()), ex);
+            getPlugin().getComponentLogger().error(text("Unable to load language files."), ex);
             getServer().getPluginManager().disablePlugin(this);
-            return;
         }
     }
 
     private void createConfig() {
         File createConfig = new File(getDataFolder(), "config.yml");
         if (!createConfig.exists()) {
-            createConfig.getParentFile().mkdirs();
             saveResource("config.yml", false);
         }
 

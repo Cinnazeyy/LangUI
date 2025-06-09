@@ -32,7 +32,7 @@ public class LanguageSelectMenu implements Listener {
     public LanguageSelectMenu(Player player) {
         menuPlayer = player;
         menu = ChestMenu.builder(3)
-                .title(LangUtil.getInstance().get(player, "menu.select-language"))
+                .title(Component.text(LangUtil.getInstance().get(player, "menu.select-language")))
                 .build();
     }
 
